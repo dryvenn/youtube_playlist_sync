@@ -12,6 +12,10 @@ def main():
 
     exit_code = 0
 
+    if not config.get().sections():
+        logging.info('No playlist to sync, take a look at your configuration file.')
+        exit(exit_code)
+
     for conf in config.get().sections():
         try:
             Playlist(conf, config.get()[conf]['format'], config.get()[conf]['destination']).sync()
