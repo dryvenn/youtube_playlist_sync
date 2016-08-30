@@ -5,6 +5,12 @@ This small script aims to synchronize YouTube playlists on a local machine.
 It is intended to be run periodically (eg with cron).
 
 
+## Installation
+```bash
+> pip3 install git+https://github.com/dryvenn/youtube_playlist_sync
+```
+
+
 ## Usage
 
 ```bash
@@ -17,6 +23,7 @@ It is intended to be run periodically (eg with cron).
 > As the script doesn't support any authentication, make sure all playlists are either 'Public' or 'Unlisted'.
 
 The script will look for a configuration file named `youtube_playlist_sync.ini` under `$XDG_CONFIG_HOME` or if this variable is not defined under `~/.config`.
+
 
 ### youtube_playlist_sync.ini file example
 
