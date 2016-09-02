@@ -97,7 +97,8 @@ class Playlist:
         ytids = self.scan()
         dl = Downloader(self.format, self.path)
         for item in self.get_info()['entries']:
-            item_ytid = item['id']
-            if item_ytid not in ytids:
-                dl.download("https://www.youtube.com/watch?v=" + item_ytid)
-                ytids.append(item_ytid)
+            if item: # unauthorized videos appear as None
+                item_ytid = item['id']
+                if item_ytid not in ytids:
+                    dl.download("https://www.youtube.com/watch?v=" + item_ytid)
+                    ytids.append(item_ytid)
