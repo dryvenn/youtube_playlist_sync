@@ -2,6 +2,8 @@
 
 This small script aims to synchronize YouTube playlists on a local machine.
 
+Playlists can then be transefered elsewhere, for example to a smartphone using BitTorrent's Sync.
+
 It is intended to be run periodically (eg with cron).
 
 
