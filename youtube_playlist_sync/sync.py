@@ -19,9 +19,11 @@ class Downloader:
     """
 
     def __init__(self, fmt, dst_dir):
+        basedir = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+        logfile = os.path.join(basedir, 'youtube_dl.log')
         logger = logging.getLogger('youtube_dl')
         logger.setLevel(logging.ERROR) # log ERROR, CRITICAL not DEBUG, INFO, WARNING
-        logger.addHandler(logging.handlers.RotatingFileHandler('youtube_dl.log'))
+        logger.addHandler(logging.handlers.RotatingFileHandler(logfile))
         postprocessors = []
         if is_audio_format(fmt):
             postprocessors.append({
