@@ -6,6 +6,8 @@ Playlists can then be transefered elsewhere, for example to a smartphone using B
 
 It is intended to be run periodically (eg with cron).
 
+> If you're only interested in mp3, check out [this project](https://github.com/dryvenn/youtube_mp3).
+
 
 ## Installation
 ```bash
